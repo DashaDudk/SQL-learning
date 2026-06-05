@@ -162,6 +162,18 @@ SELECT
 FROM Employee e;
 
 SELECT 
+	'min_salary' AS parametr
+	, MIN(salary_in_usd) AS min_salary
+FROM salaries
+
+UNION
+
+SELECT 
+	'max_salary' AS parametr
+	, MAX(salary_in_usd) AS min_salary
+FROM salaries;
+
+SELECT 
 	c.Email
 	, 'customer' as type
 FROM Customer c
